@@ -7,10 +7,11 @@
     <script>
        function sub()
        {
-           var data1=document.getElementsByName("btn").values;
-           var data2=document.getElementById("price").value;
+           var data1=document.getElementById("prod").value;
+           var data2=document.getElementById("Quantity").value;
+           var data3=document.getElementById("price").value;
 
-           document.getElementById("mydiv").innerHTML="Product: "+data1+"<br>"+"price :"+data2;
+           document.getElementById("mydiv").innerHTML="Product: "+data1+"<br>"+"Quantity: "+data3+"<br>"+"price :"+data2;
        }
     </script>
 </head>
@@ -20,12 +21,15 @@
         <table>
             <tr>
                 <td>ADD PRODUCT</td>
-                <td><input type="radio" name="btn" id="console">Console</td>
-                <td><input type="radio" name="btn" id="ssd">SSD</td>
+                <td><input type="text" name="prod" id="prod"></td>
+            </tr>
+            <tr>
+                <td>ADD Quantity</td>
+                <td><input type="text" name="Quantity" id="Quantity"></td>
             </tr>
             <tr>
                 <td>Price</td>
-                <td><input type="text" name="btn" id="price"></td>
+                <td><input type="text" name="price" id="price"></td>
             </tr>
             <tr>
                 <td><button type="button" name="button" id="btn2" onclick="sub()">Submit</button></td>
@@ -33,7 +37,7 @@
         </table>
     </form>
     <div id="mydiv">
-
+      Details: 
     </div>
 </body>
 </html>
